@@ -162,7 +162,7 @@ public class SvgViewShadowNode extends LayoutShadowNode {
 
         drawChildren(new Canvas(bitmap));
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
         bitmap.recycle();
         byte[] bitmapBytes = stream.toByteArray();
         return Base64.encodeToString(bitmapBytes, Base64.DEFAULT);
