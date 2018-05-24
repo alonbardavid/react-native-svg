@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import createReactNativeComponentClass from 'react-native/Libraries/Renderer/shims/createReactNativeComponentClass';
+import React, { Component } from "react";
+import { requireNativeComponent } from "react-native";
 
 export default class extends Component {
-    static displayName = 'Defs';
+    static displayName = "Defs";
 
     render() {
         return <RNSVGDefs>{this.props.children}</RNSVGDefs>;
     }
 }
 
-const RNSVGDefs = createReactNativeComponentClass({
-    validAttributes: {},
-    uiViewClassName: 'RNSVGDefs'
+const RNSVGDefs = requireNativeComponent("RNSVGDefs", null, {
+    nativeOnly: {}
 });
